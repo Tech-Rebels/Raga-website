@@ -1,0 +1,31 @@
+html, body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-bg1: #030303;
+    --color-bg2: #1b1b1b;
+    --color-bg3: #303030;
+    --color-f1: #d7d7d7;
+    --color-f2: #e8e8e8;
+    --color-f3: #f0f0f0;
+    --color-r1: #800016;
+    --color-r2: #a0001c;
+    --color-r3: #c00021;
+    --color-r4: #ff002b;
+    --color-r5: #df0608;
+}
+
+/* hero section */
+.hero{
+    background-color: var(--color-bg1);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* about section */
+/* founder section */
+/* flagship event section */
+/* what type of events we do */
+/* contact section */
