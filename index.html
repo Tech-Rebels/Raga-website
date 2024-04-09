@@ -3,9 +3,10 @@
 
 <head>
     <title>Raga Dreamworks & Events</title>
-    <link rel="icon" href="image/t_logo.webp" type="image/icon type">
+    <link rel="icon" href="assets/img/logo1.png" type="image/icon type">
     <!-- Meta data -->
-    <meta name="description" content="Raga Dreamworks & Events is an Event & Talent Management, Producing web series, Films and Commercials">
+    <meta name="description"
+        content="Raga Dreamworks & Events is an Event & Talent Management, Producing web series, Films and Commercials">
     <meta name="keywords" content="Raga Dreamworks, Raga, events, event management ">
     <link rel="canonical" href="https://ragadreamworks.co">
     <meta name="robots" content="index">
@@ -13,9 +14,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="language" content="English">
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/index.css">
+
     <!-- font -->
 </head>
 
@@ -24,14 +30,91 @@
     <div class="loader"></div>
     <!-- hero section -->
     <header class="hero">
-        <nav class="navbar"></nav>
+        <nav>
+            <a href="index.html"><img src="assets/img/logo1.png" alt="RAGA logo" /></a>
+            <div class="nav-icons">
+                <div class='navbar'>
+                    <svg class="inline-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" 
+                        viewBox="0 0 32 22.5" enable-background="new 0 0 32 22.5" xml:space="preserve">
+                        <g class="svg-menu-toggle">
+                            <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0
+                   c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z">
+                            </path>
+                            <path class="bar"
+                                d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z">
+                            </path>
+                            <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0
+                   c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z">
+                            </path>
+                            <rect width="10" height="5" fill="none">
+
+                            </rect>
+                        </g>
+
+                    </svg>
+                </div>
+                <!-- <div class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div> -->
+            </div>
+            <div id="navigationWrap" class="close">
+                <div class="container menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#" class="nav-link">Home</a></li>
+                            <li><a href="index.html#about" class="nav-link">About</a></li>
+                            <li><a href="pages/founder.html" class="nav-link">Founder</a></li>
+                            <li><a href="pages/events.html" class="nav-link">Events</a></li>
+                            <li><a href="#" class="nav-link">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <div class="social">
+                        <a href="#" class="nav-link"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#" class="nav-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="nav-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="interactive">
+                    <svg width="55" height="55" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1" y1="19" x2="19" y2="1" stroke="#c00021" stroke-width="1.2"/>
+                        <line x1="1" y1="1" x2="19" y2="19" stroke="#c00021" stroke-width="1.2"/>
+                      </svg>
+                </div>
+            </div>
+        </nav>
     </header>
+
+
     <!-- Main content -->
     <main class="main">
         <!-- about brand section -->
+        <a name="about"></a>
         <section class="about"></section>
         <!-- founder section -->
-        <section class="founder"></section>
+        <section class="founder">
+            <div class="gradient-bg">
+                <div class="gradients-container">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                                    result="goo" />
+                                <feBlend in="SourceGraphic" in2="goo" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <div class="g1"></div>
+                    <div class="g2"></div>
+                    <div class="g4"></div>
+                    <!-- <div class="g3"></div>
+                    <div class="g4"></div>
+                    <div class="g5"></div> -->
+                    <div class="g-interactive"></div>
+                </div>
+            </div>
+        </section>
         <!-- flagship events section -->
         <section class="flagship"></section>
         <!-- type of events section -->
@@ -43,7 +126,14 @@
     <footer class="footer"></footer>
 </body>
 
+
+<!-- Jquery -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<!-- GSAP-TweenMax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 <!-- Javascript -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/index.js"></script>
+
 
 </html>

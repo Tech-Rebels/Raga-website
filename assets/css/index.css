@@ -1,5 +1,4 @@
 html, body {
-    display: block;
     margin: 0;
     padding: 0;
 }
@@ -15,17 +14,129 @@ html, body {
     --color-r3: #c00021;
     --color-r4: #ff002b;
     --color-r5: #df0608;
+    --color-r6: 160, 0, 28;
+    --circle-size: 80%;
+    --blending: hard-light;
 }
 
 /* hero section */
 .hero{
-    background-color: var(--color-bg1);
+    background-color: var(--color-bg2);
     height: 100vh;
     width: 100vw;
 }
 
 /* about section */
+.about{
+    background-color: var(--color-bg2);
+    height: 100vh;
+    width: 100vw;
+}
 /* founder section */
+.founder{
+    background-color: var(--color-bg2);
+    height: 100vh;
+    width: 100vw;
+}
+.gradient{
+    position: relative;
+    overflow-x: hidden;
+}
+.gradient-bg {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.gradient-bg svg {
+    display: none;
+}
+.gradients-container {
+    filter: url(#goo) blur(40px);
+    width: 100%;
+    height: 100%;
+}
+.gradient-bg .g1 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-r6),0.8) 0, rgba(var(--color-r6), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+    animation: moveVertical 30s ease infinite;
+    opacity: 1;
+}
+.gradient-bg .g2 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-r6),0.8) 0, rgba(var(--color-r6), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 400px);
+    animation: moveInCircle 20s reverse infinite;
+    opacity: 1;
+}
+.gradient-bg .g4 {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-r6),0.8) 0, rgba(var(--color-r6), 0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: calc(50% - 200px);
+    animation: moveHorizontal 40s ease infinite;
+    opacity: 0.7;
+}
+@keyframes moveInCircle {
+    0% {
+        transform: rotate(0deg);
+   }
+    50% {
+        transform: rotate(180deg);
+   }
+    100% {
+        transform: rotate(360deg);
+   }
+}
+@keyframes moveVertical {
+    0% {
+        transform: translateY(-50%);
+   }
+    50% {
+        transform: translateY(50%);
+   }
+    100% {
+        transform: translateY(-50%);
+   }
+}
+@keyframes moveHorizontal {
+    0% {
+        transform: translateX(-50%) translateY(-10%);
+   }
+    50% {
+        transform: translateX(50%) translateY(10%);
+   }
+    100% {
+        transform: translateX(-50%) translateY(-10%);
+   }
+}
+.gradient-bg .g-interactive {
+    position: absolute;
+    background: radial-gradient(circle at center, rgba(var(--color-r6),0.8) 0, rgba(var(--color-r6),0) 50%) no-repeat;
+    mix-blend-mode: var(--blending);
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: -50%;
+    opacity: 0.7;
+}
 /* flagship event section */
 /* what type of events we do */
 /* contact section */

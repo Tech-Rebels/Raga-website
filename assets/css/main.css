@@ -1,22 +1,204 @@
-html, body {
-    display: block;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html,
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
-:root{
-    --color-bg1: #030303;
-    --color-bg2: #1b1b1b;
-    --color-bg3: #303030;
-    --color-f1: #d7d7d7;
-    --color-f2: #e8e8e8;
-    --color-f3: #f0f0f0;
-    --color-r1: #800016;
-    --color-r2: #a0001c;
-    --color-r3: #c00021;
-    --color-r4: #ff002b;
-    --color-r5: #df0608;
+:root {
+  --color-bg1: #030303;
+  --color-bg2: #1b1b1b;
+  --color-bg3: #303030;
+  --color-f1: #d7d7d7;
+  --color-f2: #e8e8e8;
+  --color-f3: #f0f0f0;
+  --color-r1: #800016;
+  --color-r2: #a0001c;
+  --color-r3: #c00021;
+  --color-r4: #ff002b;
+  --color-r5: #df0608;
 }
 
 /* loader */
+
 /* nav */
+nav {
+  display: flex;
+  position: relative;
+  padding: 2% 5%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+nav img {
+  width: 100px;
+}
+.nav-icons {
+  position: relative;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#navigationWrap {
+  display: none;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background: var(--color-bg1);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: none;
+  font-family: 'Oswald', sans-serif;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li {
+  color: white;
+  font-size: 15vh;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-weight: 700;
+}
+nav ul li:first-child {
+  font-size: 8vh;
+  overflow: visible;
+}
+@media (max-width: 750px) {
+  nav ul li {
+    font-size: 15vw;
+  }
+  nav ul li:first-child {
+    font-size: 8vw;
+  }
+}
+nav a {
+  color: white;
+  padding: 0 10px;
+  margin: 0;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #f24738;
+}
+.navbar {
+  /* position: absolute; */
+  /* top: 20px;
+  left: 20px; */
+  width: 45px;
+  height: 45px;
+  z-index: 20;
+  cursor: pointer;
+}
+.close {
+  display: none;
+  opacity: 0;
+}
+.social a {
+  color: #484848;
+  color: white;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.social a:hover {
+  color: #f24738;
+}
+.fa {
+  color: #484848;
+  padding-right: 12px;
+  font-size: 1.8em !important;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.fa:hover {
+  color: #f24738;
+}
+/* hamburger menu css */
+.svg-menu-toggle {
+  fill: var(--color-r4);
+  pointer-events: all;
+  cursor: pointer;
+}
+.svg-menu-toggle .bar {
+  -webkit-transform: rotate(0) translateY(0) translateX(0);
+  transform: rotate(0) translateY(0) translateX(0);
+  opacity: 1;
+  -webkit-transform-origin: 20px 10px;
+  transform-origin: 20px 10px;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out,
+    opacity 0.2s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+}
+.svg-menu-toggle .bar:nth-of-type(1) {
+  -webkit-transform-origin: 20px 10px;
+  transform-origin: 20px 10px;
+}
+.svg-menu-toggle .bar:nth-of-type(3) {
+  -webkit-transform-origin: 20px 20px;
+  transform-origin: 20px 20px;
+}
+.svg-menu-toggle:hover .bar:nth-of-type(1) {
+  -webkit-transform: rotate(0deg) translateY(7px) translateX(0);
+  transform: rotate(0deg) translateY(7px) translateX(0);
+}
+.svg-menu-toggle:hover .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.svg-menu-toggle:hover .bar:nth-of-type(3) {
+  -webkit-transform: rotate(0deg) translateY(-7px) translateX(0em);
+  transform: rotate(deg) translateY(-7px) translateX(0em);
+}
+.inline-svg {
+  display: block;
+  margin: 0 auto;
+}
+/* navbar cross css*/
+.interactive {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -3%;
+  left: -2.5%;
+  opacity: 0.9;
+  pointer-events: none;
+  transition: ease-in-out;
+}
+@media (max-width: 1000px) {
+  #navigationWrap {
+    cursor: auto;
+  }
+  .interactive {
+    display: none !important;
+  }
+}
 /* footer */
+/* scrollbar */
