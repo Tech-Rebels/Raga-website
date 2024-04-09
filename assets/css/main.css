@@ -19,6 +19,7 @@ body {
   --color-r3: #c00021;
   --color-r4: #ff002b;
   --color-r5: #df0608;
+  --font1: "Oswald", sans-serif;
 }
 
 /* loader */
@@ -30,7 +31,7 @@ nav {
   padding: 2% 5%;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 1000;
 }
 nav img {
   width: 100px;
@@ -58,13 +59,13 @@ nav img {
   height: 100%;
   background: var(--color-bg1);
   opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 0;
   overflow: hidden;
   cursor: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--font1);
 }
 nav ul {
   list-style-type: none;
@@ -201,4 +202,29 @@ nav a:hover {
   }
 }
 /* footer */
+
+
 /* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--color-bg2);
+}
+::-webkit-scrollbar-track {
+  border-radius: 0px; /* Track */
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg2);
+}
+::-webkit-scrollbar-track:hover {
+  background: var(--color-r3);
+}
+
+/* Text selection */
+::-moz-selection { 
+  color: var(--color-r3);
+  background: var(--color-f2);
+}
+::selection {
+  color: var(--color-f2);
+  background: var(--color-r3);
+}
