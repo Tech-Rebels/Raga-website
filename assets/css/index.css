@@ -5,6 +5,7 @@ body {
   background-color: var(--color-bg2);
 }
 
+
 :root {
   --color-bg1: #030303;
   --color-bg2: #1b1b1b;
@@ -24,18 +25,25 @@ body {
   --blending: hard-light;
 }
 
+@font-face {
+  font-family: 'Mursgothic';
+  src: url('../fonts/MursGothic-WideDark.woff2');
+}
+
+
+
 /* hero section */
 .hero {
   background-color: var(--color-bg2);
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* about section */
 .about {
   background-color: var(--color-bg2);
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* founder section */
@@ -43,7 +51,7 @@ body {
   background-color: var(--color-bg2);
   position: relative;
   height: 100vh;
-  width: 100vw;
+  overflow-x: hidden;
 }
 
 .gradient {
@@ -304,5 +312,71 @@ body {
   left: -30px;
 }
 /* flagship event section */
+
 /* what type of events we do */
+.types {
+  background-color: var(--color-bg2);
+  height: 300vh;
+  width: 100%;
+}
+.t-heading {
+  /* height: 100px;  */
+  position: sticky;
+  top: 26vh;
+}
+.t-heading h1 {
+  color: var(--color-f3);
+  text-align: center;
+  font-family: 'Mursgothic';
+  font-size: 10vw;
+  font-weight: bold;
+}
+.t-content{
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+.t-grid-container{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  position: relative;
+  
+}
+.tg-row{
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+.tg-grid{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 40vw;
+  margin: 0 1.5vw;
+}
+.tg-grid:nth-child(2){
+  margin-top: 50px;
+}
+.tgg2{
+  justify-content: end;
+}
+.tg-card{
+  height: 23vw;
+  width: 18vw;
+  background-color: var(--color-f3);
+  padding: 10px;
+  border-radius: 15px;
+}
+.tg-card4{
+  background-color: #df0608;
+}
+
 /* contact section */
+.contact{
+  background-color: var(--color-bg2);
+  height: 100vh;
+  overflow-x: hidden;
+}
