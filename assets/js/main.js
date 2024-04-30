@@ -1,3 +1,43 @@
+// for loader
+document.addEventListener('DOMContentLoaded', function() {
+  const loader = document.querySelector('.loader');
+  const loaderBar = document.querySelector('.loader-bar');
+
+  let loaderHeight = 0;
+  let targetHeight = 55; // Target height for the loader bar
+  const animationDuration = 3000; // Animation duration in milliseconds
+  const frameDuration = 2000 / 80; // Targeting 60 frames per second
+
+  let startTime = null;
+
+  function animateLoader(timestamp) {
+    if (!startTime) {
+      startTime = timestamp;
+    }
+
+    const progress = timestamp - startTime;
+    const percentageProgress = progress / animationDuration;
+    loaderHeight = percentageProgress * targetHeight;
+
+    if (loaderHeight >= targetHeight) {
+      loaderHeight = targetHeight;
+    }
+
+    loaderBar.style.height = loaderHeight + 'vh';
+
+    if (progress < animationDuration) {
+      requestAnimationFrame(animateLoader);
+    } else {
+      loader.style.display = 'none';
+      document.body.classList.add('loaded');
+    }
+  }
+
+  requestAnimationFrame(animateLoader);
+});
+
+
+
 // for Navbar
 var navigation = new TimelineLite({paused: true, reversed: true});
 navigation.to("#navigationWrap", 0.5, {opacity: 1, display: 'block'})

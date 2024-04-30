@@ -319,12 +319,18 @@ body {
 .f-header {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 .f-header h1 {
   color: var(--color-f3);
   font: var(--font2);
   font-weight: 900;
-  font-size: 2em;
+  font-size: 3em;
+}
+@media (max-width: 550px) {
+  .f-header h1 {
+    font-size: 2em;
+  }
 }
 #horizontal-scoll {
   padding: 50px 0 10px 0;
@@ -590,7 +596,8 @@ body {
 .contact {
   background-color: var(--color-bg2);
   /* height: 100vh; */
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -768,8 +775,8 @@ body {
 }
 
 .magnetic {
-  margin: -50px -100px;
-  padding: 20px 100px 20px 100px;
+  margin: -20px -100px;
+  padding: 20px 100px 40px 100px;
   display: inline-block;
   border-radius: 50%;
   z-index: 0;

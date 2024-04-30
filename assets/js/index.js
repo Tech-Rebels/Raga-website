@@ -93,11 +93,20 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
   event.target.appendChild(accessKeyInput);
 
   var formData = new FormData(event.target);
+  var object = {};
+  formData.forEach(function(value, key){
+    object[key] = value;
+  });
+  var json = JSON.stringify(object);
+
   event.target.removeChild(accessKeyInput);
 
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
-    body: formData,
+    body: json,
+    headers: {
+      "Content-Type": "application/json"
+    },
   })
     .then((response) => response.json())
     .then((data) => {
@@ -111,3 +120,4 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
       alert("Uh-oh! A little glitch. Please!, Retry later");
     });
 });
+
