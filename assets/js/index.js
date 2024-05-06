@@ -1,3 +1,19 @@
+// hero section
+// document.addEventListener("mousemove", (e) => {
+//   document.querySelector(".hero-container").style.cssText = `--page-x: ${e.pageX}; --page-y: ${e.pageY};`
+// })
+var element = document.querySelector('.hero'); 
+
+element.addEventListener("mousemove", (e) => {
+  var x = e.clientX - element.offsetLeft; 
+  var y = e.clientY - element.offsetTop;  
+  
+  element.style.cssText = `--page-x: ${x}; --page-y: ${y};` 
+});
+
+
+
+
 // founder gradient
 document.addEventListener("DOMContentLoaded", () => {
   const interBubble = document.querySelector(".g-interactive");

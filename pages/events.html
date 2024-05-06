@@ -73,7 +73,7 @@
             </div>
             <div id="navigationWrap" class="close">
                 <div class="container menu">
-                    <nav>
+                    <nav class="full-nav">
                         <ul>
                             <li><a href="../index.html" class="nav-link">Home</a></li>
                             <li><a href="index.html#about" class="nav-link">About</a></li>
@@ -82,11 +82,11 @@
                             <li><a href="index.html#contact" class="nav-link">Contact</a></li>
                         </ul>
                     </nav>
-                    <div class="social">
+                    <!-- <div class="social">
                         <a href="#" class="nav-link"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                         <a href="#" class="nav-link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href="#" class="nav-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="interactive">
                     <svg width="55" height="55" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -160,20 +160,31 @@
                 <span>Projects.</span>
             </h2>
 
-            <div class="projects__container container grid">
-                <article class="projects__card">
+            <ul class="filter-menu">
+                <li data-target="all">explore All.</li>
+                <li data-target="music">MUSICAL WONDERS.</li>
+                <li data-target="inter">INTERNATIONAL ENGAGEMENTS.</li>
+                <li data-target="digital">DIGITAL PRODUCTION.</li>
+                <li data-target="awards">TELEVISION & AWARDS.</li>
+            </ul>
+
+            <div class="projects__container p-container grid">
+                 <!-- 8:12 img size -->
+                <article class="projects__card" data-item="music">
                     <div class="projects__image">
                         <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
                             alt="image" class="projects__img">
-
-                        <a href="#" class="projects__button button">
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                        <div class="project_property_wrapper">
+                            <p class="project_property">Hello</p>
+                            <p class="project_property">Hello</p>
+                        </div>
                     </div>
 
                     <div class="projects__content">
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
                         <h3 class="projects__subtitle">Music</h3>
-                        <h2 class="projects__title">EN KADHALE</h2>
+                        <h2 class="projects__title">EN KADHALE male</h2>
 
                         <p class="projects__description">
                             Music Evening Featuring SPB
@@ -181,31 +192,23 @@
                             renowned Shri. SPB
                         </p>
                     </div>
-
-                    <div class="projects__buttons">
-                        <a href="https://github.com/" target="_blank" class="projects__link">
-                            <i class="ri-github-line"></i> Source Code
-                        </a>
-
-                        <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                            <i class="ri-dribbble-line"></i> View
-                        </a>
-                    </div>
                 </article>
 
-                <article class="projects__card">
+                <article class="projects__card" data-item="music">
                     <div class="projects__image">
                         <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
                             alt="image" class="projects__img">
-
-                        <a href="#" class="projects__button button">
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                            <div class="project_property_wrapper">
+                                <p class="project_property">Kanna</p>
+                                <p class="project_property">Hello</p>
+                            </div>
                     </div>
 
                     <div class="projects__content">
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
                         <h3 class="projects__subtitle">Music</h3>
-                        <h2 class="projects__title">EN KADHALE</h2>
+                        <h2 class="projects__title">EN KADHALE male</h2>
 
                         <p class="projects__description">
                             Music Evening Featuring SPB
@@ -213,31 +216,23 @@
                             renowned Shri. SPB
                         </p>
                     </div>
-
-                    <div class="projects__buttons">
-                        <a href="https://github.com/" target="_blank" class="projects__link">
-                            <i class="ri-github-line"></i> Source Code
-                        </a>
-
-                        <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                            <i class="ri-dribbble-line"></i> View
-                        </a>
-                    </div>
                 </article>
-
-                <article class="projects__card">
+                
+                <article class="projects__card" data-item="inter">
                     <div class="projects__image">
                         <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
                             alt="image" class="projects__img">
-
-                        <a href="#" class="projects__button button">
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                            <div class="project_property_wrapper">
+                                <p class="project_property">Kanna</p>
+                                <p class="project_property">Hello</p>
+                            </div>
                     </div>
 
                     <div class="projects__content">
-                        <h3 class="projects__subtitle">Music</h3>
-                        <h2 class="projects__title">EN KADHALE</h2>
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
+                        <h3 class="projects__subtitle">inter</h3>
+                        <h2 class="projects__title">EN KADHALE female</h2>
 
                         <p class="projects__description">
                             Music Evening Featuring SPB
@@ -245,31 +240,23 @@
                             renowned Shri. SPB
                         </p>
                     </div>
-
-                    <div class="projects__buttons">
-                        <a href="https://github.com/" target="_blank" class="projects__link">
-                            <i class="ri-github-line"></i> Source Code
-                        </a>
-
-                        <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                            <i class="ri-dribbble-line"></i> View
-                        </a>
-                    </div>
                 </article>
-
-                <article class="projects__card">
+                
+                <article class="projects__card" data-item="music">
                     <div class="projects__image">
                         <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
                             alt="image" class="projects__img">
-
-                        <a href="#" class="projects__button button">
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                            <div class="project_property_wrapper">
+                                <p class="project_property">Kanna</p>
+                                <p class="project_property">Hello</p>
+                            </div>
                     </div>
 
                     <div class="projects__content">
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
                         <h3 class="projects__subtitle">Music</h3>
-                        <h2 class="projects__title">EN KADHALE</h2>
+                        <h2 class="projects__title">EN KADHALE male</h2>
 
                         <p class="projects__description">
                             Music Evening Featuring SPB
@@ -277,31 +264,23 @@
                             renowned Shri. SPB
                         </p>
                     </div>
-
-                    <div class="projects__buttons">
-                        <a href="https://github.com/" target="_blank" class="projects__link">
-                            <i class="ri-github-line"></i> Source Code
-                        </a>
-
-                        <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                            <i class="ri-dribbble-line"></i> View
-                        </a>
-                    </div>
                 </article>
-
-                <article class="projects__card">
+                
+                <article class="projects__card" data-item="digital">
                     <div class="projects__image">
                         <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
                             alt="image" class="projects__img">
-
-                        <a href="#" class="projects__button button">
-                            <i class="ri-arrow-right-up-line"></i>
-                        </a>
+                            <div class="project_property_wrapper">
+                                <p class="project_property">Kanna</p>
+                                <p class="project_property">Hello</p>
+                            </div>
                     </div>
 
                     <div class="projects__content">
-                        <h3 class="projects__subtitle">Music</h3>
-                        <h2 class="projects__title">EN KADHALE</h2>
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
+                        <h3 class="projects__subtitle">digital</h3>
+                        <h2 class="projects__title">EN KADHALE kid</h2>
 
                         <p class="projects__description">
                             Music Evening Featuring SPB
@@ -309,52 +288,36 @@
                             renowned Shri. SPB
                         </p>
                     </div>
+                </article>
 
-                    <div class="projects__buttons">
-                        <a href="https://github.com/" target="_blank" class="projects__link">
-                            <i class="ri-github-line"></i> Source Code
-                        </a>
+                <article class="projects__card" data-item="awards">
+                    <div class="projects__image">
+                        <img src="https://images.unsplash.com/photo-1592417817038-d13fd7342605?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTI3NjU5NTV8&ixlib=rb-4.0.3&q=85"
+                            alt="image" class="projects__img">
+                            <div class="project_property_wrapper">
+                                <p class="project_property">Kanna</p>
+                                <p class="project_property">Hello</p>
+                            </div>
+                    </div>
 
-                        <a href="https://dribbble.com/" target="_blank" class="projects__link">
-                            <i class="ri-dribbble-line"></i> View
-                        </a>
+                    <div class="projects__content">
+                        <h3 class="projects__subtitle">2023</h3>
+                        <span class="projects__sub__point"></span>
+                        <h3 class="projects__subtitle">awards</h3>
+                        <h2 class="projects__title">EN KADHALE kid</h2>
+
+                        <p class="projects__description">
+                            Music Evening Featuring SPB
+                            “En Kadhale," a musical event with the
+                            renowned Shri. SPB
+                        </p>
                     </div>
                 </article>
+                
+
             </div>
         </section>
 
-        <!-- <section class="portfolio">
-            <div class="p-container">
-
-                <ul class="filter-menu">
-                    <li data-target="all">All</li>
-                    <li data-target="male">Male</li>
-                    <li data-target="female">Female</li>
-                    <li data-target="kid">Kid</li>
-                </ul>
-
-                <ul class="filter-item">
-                    <li data-item="male"><img
-                            src="https://media.boohoo.com/i/boohoo/mzz70546_white_xl?$product_image_main_mobile$"
-                            alt=""></li>
-                    <li data-item="male"><img
-                            src="https://media.boohoo.com/i/boohoo/mzz70546_white_xl?$product_image_main_mobile$"
-                            alt=""></li>
-                    <li data-item="female"><img
-                            src="https://i.pinimg.com/originals/8e/dc/0b/8edc0b484b3c9098181f72746653f63c.jpg" alt="">
-                    </li>
-                    <li data-item="female"><img
-                            src="https://i.pinimg.com/originals/a3/dd/2c/a3dd2c9d7028a36f89291ac308497cca.jpg" alt="">
-                    </li>
-                    <li data-item="kid"><img
-                            src="https://media.kasperskydaily.com/wp-content/uploads/sites/36/2020/02/11224850/smartphone-for-kids-featured.jpg"
-                            alt=""></li>
-                    <li data-item="kid"><img
-                            src="https://images.ctfassets.net/cnu0m8re1exe/2elnw1rJ0HL8QqPOd3OtH5/c5b25256f2f8c7ba398ef21a2ca6504d/Kid-Thinking.jpg?w=650&h=433&fit=fill"
-                            alt=""></li>
-                </ul>
-            </div>
-        </section> -->
     </main>
 
     <!-- <section style="height: 100vh; padding-top: 20px;background-color: red;"></section> -->
