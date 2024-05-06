@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 html,
 body {
@@ -9,8 +9,10 @@ body {
 
 :root {
   --color-bg1: #030303;
-  --color-bg2: #1b1b1b;
-  --color-bg22: 27, 27, 27;
+  /* --color-bg2: #1b1b1b; */
+  /* --color-bg22: 27, 27, 27; */
+  --color-bg2: #0e0f11;
+  --color-bg22: 14, 15, 17;
   --color-bg3: #303030;
   --color-f1: #d7d7d7;
   --color-f2: #e8e8e8;
@@ -37,16 +39,21 @@ body {
   --top: #890809;
   --bottom: #070a14;
   /* background-image: linear-gradient(var(--top), var(--bottom)); */
+  background-position: 80% 75%;
+  /* background-size: 65%; */
+  background-image: url('../img/logo-g2.png');
   background-color: var(--color-bg2);
   background-repeat: no-repeat;
-  background-size: contain;
   min-height: 100vh;
   width: 100%;
-  /* overflow-x: hidden; */
   overflow: hidden;
+  margin-bottom: 60px;
 }
-
-
+@media screen and (max-width: 500px){
+  .hero{
+    /* background-size: cover; */
+  }
+}
 .hero-images div {
   --border-width: 15px;
   --speed: 0.09;
@@ -101,38 +108,36 @@ body {
   grid-template-columns: 50% 50%;
 }
 /* title */
-.hero h1 {
+.header{
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 105px;
+  font-family: var(--font2);
+  margin: 10px;
+  font-weight: bold;
+  color: #890809;
+}
+.header h2 {
   color: #fff;
   text-align: center;
   font-size: 20px;
-  /* font-weight: 700; */
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-weight: 700;
 }
-.header h2 {
-  position: absolute;
-  color: #fff;
-  text-align: center;
-  font-size: 61px;
-  top: 45%;
-  left: 50%;
-  font-weight: bold;
-  color: #890809;
-  transform: translate(-50%, -50%);
-}
-
 .header p {
-  position: absolute;
+  
   color: #fff;
   text-align: center;
   font-size: 30px;
-  top: 52%;
-  left: 50%;
   font-weight: bold;
   color: #890809;
-  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 .hero-images div:nth-child(1) {
@@ -302,9 +307,6 @@ body {
   }
 }
 
-
-
-
 /* about section */
 .about {
   top: 0;
@@ -314,7 +316,7 @@ body {
   background-color: var(--color-bg2);
   /* border: 1px solid red; */
 }
-.about-wrapper{
+.about-wrapper {
   width: 95vw;
   margin: auto;
   display: flex;
@@ -349,7 +351,8 @@ body {
   margin: 0 auto;
   border: 1px solid color-mix(in srgb, #333, white 20%);
   border-radius: 18px;
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #26282c;
   color: white;
   padding: 30px;
   margin-bottom: 20px;
@@ -387,22 +390,22 @@ body {
 }
 
 /* responsive */
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .about-wrapper {
-      display: block;
-      /* flex-direction: column; */
+    display: block;
+    /* flex-direction: column; */
   }
-  .about-card{
+  .about-card {
     width: 80vw;
   }
   .about-container,
   .about-content {
-      margin: 0 10px;
-      max-width: 100%;
+    margin: 0 10px;
+    max-width: 100%;
   }
   .about-content {
-      position: relative;
-      /* height: 70vh; */
+    position: relative;
+    /* height: 70vh; */
   }
 }
 
@@ -412,14 +415,15 @@ body {
   font-size: 23px;
 }
 
-.about-content h1{
+.about-content h1 {
   font-family: var(--font2);
   color: var(--color-r3);
   font-size: 50px;
 }
 
 /* number count */
-.exp , .event_c{
+.exp,
+.event_c {
   font-family: var(--font2);
   color: var(--color-f2);
   display: flex;
@@ -427,14 +431,16 @@ body {
   align-items: center;
 }
 
-.exp .counter,.event_c .counter{
+.exp .counter,
+.event_c .counter {
   font-family: Bold, var(--font2);
   font-size: 2rem;
   line-height: 1;
 }
-.exp span,.event_c span{
-  font-size:2rem;
-  margin:16px 0 16px 0;
+.exp span,
+.event_c span {
+  font-size: 2rem;
+  margin: 16px 0 16px 0;
 }
 
 /* founder section */

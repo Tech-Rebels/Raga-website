@@ -10,8 +10,10 @@ body {
 
 :root {
   --color-bg1: #030303;
-  --color-bg2: #1b1b1b;
-  --color-bg22: 27, 27, 27;
+  /* --color-bg2: #1b1b1b; */
+  /* --color-bg22: 27, 27, 27; */
+  --color-bg2: #0e0f11;
+  --color-bg22: 14, 15, 17;
   --color-bg3: #303030;
   --color-bg4: rgba(0, 0, 0, 0.5);
   --color-f0: #bdbdbd;
@@ -90,6 +92,9 @@ nav {
   top: 0;
   left: 0;
   width: 90vw;
+}
+.full-nav{
+  background-color: var(--color-bg2);
 }
 .nav-company {
   font-size: 45px;
