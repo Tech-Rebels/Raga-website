@@ -123,6 +123,7 @@ body {
   margin: 10px;
   font-weight: bold;
   color: #890809;
+  /* color: var(--color-r3); */
 }
 .header h2 {
   color: #fff;
