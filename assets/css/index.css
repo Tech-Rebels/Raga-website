@@ -17,6 +17,7 @@ body {
   --color-f1: #d7d7d7;
   --color-f2: #e8e8e8;
   --color-f3: #f0f0f0;
+  --color-f4: #a3a3a3;
   --color-r1: #800016;
   --color-r2: #a0001c;
   --color-r3: #c00021;
@@ -384,6 +385,7 @@ body {
 
 .testimony {
   font-size: 1.6rem;
+  color: var(--color-f1);
 }
 
 .img-card img {
@@ -779,7 +781,7 @@ body {
 
 .card .title {
   position: relative;
-  margin-top: 45vh;
+  margin-top: 40vh;
   z-index: 2;
   color: var(--color-f3);
   transform: translateZ(20px);
