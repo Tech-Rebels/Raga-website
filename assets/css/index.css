@@ -784,25 +784,30 @@ body {
   margin-top: 40vh;
   z-index: 2;
   color: var(--color-f3);
+  /* mix-blend-mode: difference; */
+  background-color: rgba(38, 40, 44, 0.7);
+  border-radius: 10px;
+  padding-left: 5px;
+  width: auto;
   transform: translateZ(20px);
 }
 .fec1 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/3.webp");
 }
 .fec2 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/11.webp");
 }
 .fec3 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/7.webp");
 }
 .fec4 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/14.webp");
 }
 .fec5 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/17.webp");
 }
 .fec6 {
-  background: url("../img/index/awards-event.png");
+  background: url("../img/events/4.webp");
 }
 .card .bg {
   position: absolute;

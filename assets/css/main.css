@@ -292,7 +292,7 @@ nav a:hover {
 .footer-content:before {
   position: absolute;
   content: "";
-  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  background: url(../img/world-map.png);
   z-index: 0;
   width: 60vw;
   height: 365px;
