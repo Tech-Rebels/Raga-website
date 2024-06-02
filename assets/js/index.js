@@ -1,18 +1,4 @@
 // hero section
-// document.addEventListener("mousemove", (e) => {
-//   document.querySelector(".hero-container").style.cssText = `--page-x: ${e.pageX}; --page-y: ${e.pageY};`
-// })
-var element = document.querySelector('.hero'); 
-
-element.addEventListener("mousemove", (e) => {
-  var x = e.clientX - element.offsetLeft; 
-  var y = e.clientY - element.offsetTop;  
-  
-  element.style.cssText = `--page-x: ${x}; --page-y: ${y};` 
-});
-
-
-
 
 // founder gradient
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,37 +25,118 @@ document.addEventListener("DOMContentLoaded", () => {
   move();
 });
 
-// horizontal scroll
-gsap.registerPlugin(ScrollTrigger);
-
-let horizontalSection = document.querySelector(".horizontal");
-// console.log(horizontalSection.scrollWidth);
-gsap.to(".horizontal", {
-  x: () => horizontalSection.scrollWidth * -1,
-  xPercent: 100,
-  scrollTrigger: {
-    trigger: ".horizontal",
-    start: "center center",
-    end: "+=2000px",
-    pin: "#horizontal-scoll",
-    scrub: true,
-    invalidateOnRefresh: true,
+// our flagship events - swiperJS
+const swiper = new Swiper(".swiper-slider", {
+  // Optional parameters
+  centeredSlides: true,
+  slidesPerView: 1,
+  grabCursor: true,
+  freeMode: false,
+  loop: true,
+  mousewheel: false,
+  keyboard: {
+    enabled: true,
+  },
+  // Enabled autoplay mode
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: false,
+    clickable: true,
+  },
+  // If we need navigation
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    640: {
+      slidesPerView: 1.25,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
   },
 });
-// flagship event tilt
-( function( $ ) {
-	"use strict";
-  $(".card").tilt({
-    maxTilt: 15,
-    perspective: 1400,
-    easing: "cubic-bezier(.03,.98,.52,.99)",
-    speed: 1200,
-    glare: true,
-    maxGlare: 0.2,
-    scale: 1.04
-  });
-  
-}( jQuery ) );
+
+
+// types of events
+
+document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide('#splide', {
+    type: 'loop',
+    perPage: 3,
+    focus: 'center',
+    autoplay: true,
+    interval: 3000,
+    flickMaxPages: 3,
+    updateOnMove: true,
+    pagination: false,
+    padding: '10%',
+    throttle: 300,
+    breakpoints: {
+      1440: {
+        perPage: 3,
+        padding: '30%'
+      },
+      1025: {
+        perPage: 1,
+        padding: '10%',
+      },
+      769: {
+        perPage: 1,
+        padding: '10%'
+      }
+    }
+  }).mount();
+});
+
+// const swiper2 = new Swiper(".swiper-slider2", {
+//   // Optional parameters
+//   centeredSlides: true,
+//   slidesPerView: 1,
+//   grabCursor: true,
+//   freeMode: false,
+//   loop: true,
+//   mousewheel: false,
+//   keyboard: {
+//     enabled: true,
+//   },
+//   // Enabled autoplay mode
+//   autoplay: {
+//     delay: 3000,
+//     disableOnInteraction: false,
+//   },
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//     dynamicBullets: false,
+//     clickable: true,
+//   },
+//   // If we need navigation
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   // Responsive breakpoints
+//   breakpoints: {
+//     640: {
+//       slidesPerView: 1.25,
+//       spaceBetween: 20,
+//     },
+//     1024: {
+//       slidesPerView: 2,
+//       spaceBetween: 20,
+//     },
+//   },
+// });
 
 // contact button
 var magnets = document.querySelectorAll(".magnetic");
@@ -98,42 +165,43 @@ function moveMagnet(event) {
 }
 
 // contact form
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  var accessKeyInput = document.createElement("input");
-  accessKeyInput.type = "hidden";
-  accessKeyInput.name = "access_key";
-  accessKeyInput.value = "7d7ec12f-c4cc-499b-9970-def376882506";
+    var accessKeyInput = document.createElement("input");
+    accessKeyInput.type = "hidden";
+    accessKeyInput.name = "access_key";
+    accessKeyInput.value = "7d7ec12f-c4cc-499b-9970-def376882506";
 
-  event.target.appendChild(accessKeyInput);
+    event.target.appendChild(accessKeyInput);
 
-  var formData = new FormData(event.target);
-  var object = {};
-  formData.forEach(function(value, key){
-    object[key] = value;
-  });
-  var json = JSON.stringify(object);
-
-  event.target.removeChild(accessKeyInput);
-
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    body: json,
-    headers: {
-      "Content-Type": "application/json"
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.success) {
-        alert("Hooray! Your message has been sent successfully.");
-      } else {
-        alert("Uh-oh! A little glitch. Please!, Retry later");
-      }
-    })
-    .catch(() => {
-      alert("Uh-oh! A little glitch. Please!, Retry later");
+    var formData = new FormData(event.target);
+    var object = {};
+    formData.forEach(function (value, key) {
+      object[key] = value;
     });
-});
+    var json = JSON.stringify(object);
 
+    event.target.removeChild(accessKeyInput);
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: json,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert("Hooray! Your message has been sent successfully.");
+        } else {
+          alert("Uh-oh! A little glitch. Please!, Retry later");
+        }
+      })
+      .catch(() => {
+        alert("Uh-oh! A little glitch. Please!, Retry later");
+      });
+  });
