@@ -83,7 +83,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     throttle: 300,
     breakpoints: {
       1440: {
-        perPage: 3,
+        perPage: 2,
         padding: '30%'
       },
       1025: {

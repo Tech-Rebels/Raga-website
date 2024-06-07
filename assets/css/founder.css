@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg2);
+  overflow-x: hidden;
+}
+
+:root {
+  --color-bg1: #030303;
+  /* --color-bg2: #1b1b1b; */
+  /* --color-bg22: 27, 27, 27; */
+  --color-bg2: #0e0f11;
+  --color-bg22: 14, 15, 17;
+  --color-bg3: #303030;
+  --color-f1: #d7d7d7;
+  --color-f2: #e8e8e8;
+  --color-f3: #f0f0f0;
+  --color-f4: #a3a3a3;
+  --color-r1: #800016;
+  --color-r2: #a0001c;
+  --color-r3: #c00021;
+  --color-r4: #ff002b;
+  --color-r5: #df0608;
+  --color-r6: 160, 0, 28;
+  --color-r7: #ff4545;
+  --font1: "Oswald", sans-serif;
+  --font2: "Mursgothic";
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+@font-face {
+  font-family: "Mursgothic";
+  src: url("../fonts/MursGothic-WideDark.woff2");
+}
+
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-bg2);
+}
